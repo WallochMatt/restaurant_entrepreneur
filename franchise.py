@@ -3,7 +3,11 @@ import logger
 
 class Franchise:
     def __init__(self, location_number):
-        self.location_number = location_number#int
+        """
+        Parameters:
+        location_number : int -> the restaurant's id, which store it is
+        """
+        self.location_number = location_number
 
     
 

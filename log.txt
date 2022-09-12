@@ -1,7 +1,7 @@
 
 Transaction 1: Pizza ordered from location 1. Total: 15
-Transaction 2: Pizza ordered from location 1. Total: 30
-Transaction 3: Pizza ordered from location 2. Total: 45
-Transaction 4: Pizza ordered from location 2. Total: 60
-Transaction 5: Pizza ordered from location 3. Total: 75
-Transaction 6: Pizza ordered from location 3. Total: 90
+Transaction 2: Lobster ordered from location 1. Total: 40
+Transaction 3: Salad ordered from location 2. Total: 47
+Transaction 4: Lobster ordered from location 2. Total: 72
+Transaction 5: Salad ordered from location 3. Total: 79
+Transaction 6: Pizza ordered from location 3. Total: 94

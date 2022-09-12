@@ -10,6 +10,10 @@ class OrderFactory:
 
     @staticmethod
     def create_order(choice):# Order static
+        """
+        Parameters:
+        choice : str -> This is set in place_order, under the Franchise class
+        """
         if choice == "Pizza":
             return Pizza()
 

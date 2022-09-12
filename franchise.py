@@ -8,6 +8,32 @@ class Franchise:
     
 
     def place_order(self):
-        choice = input("What would you like to order?: ")
-        selected_item = OrderFactory.create_order(choice)#may need to create a variable set equal to this
-        logger.sales_log.log_transaction(selected_item, self.location_number) 
+        
+        try:
+            choice = int(input("""What would you like to order?:
+        1: Pizza
+        2: Lobster
+        3: Salad
+        
+        """))
+        except: 
+            print("An exception occurred, try again")
+            return self.place_order()
+
+        if choice > 3 or choice < 1:
+            print("Please select a given menu number")
+            return self.place_order()
+
+        else:   
+            if choice == 1:
+                selected_item = OrderFactory.create_order("Pizza")#may need to create a variable set equal to this
+            
+            elif choice == 2:
+                selected_item = OrderFactory.create_order("Lobster")
+
+            elif choice == 3:
+                selected_item = OrderFactory.create_order("Salad")
+        
+            
+        
+            logger.sales_log.log_transaction(selected_item, self.location_number) 

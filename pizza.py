@@ -1,6 +1,6 @@
 from orders import Order
 
-class Pizza:
+class Pizza(Order):
     def __init__(self):
         super().__init__()
         self.dish_name = "Pizza"

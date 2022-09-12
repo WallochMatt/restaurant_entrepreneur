@@ -1,4 +1,6 @@
-class Salad:
+from orders import Order
+
+class Salad(Order):
      def __init__(self):
         super().__init__()
         self.dish_name = "Salad"

@@ -30,7 +30,7 @@ class Franchise:
 
         else:   
             if choice == 1:
-                selected_item = OrderFactory.create_order("Pizza")#may need to create a variable set equal to this
+                selected_item = OrderFactory.create_order("Pizza")
             
             elif choice == 2:
                 selected_item = OrderFactory.create_order("Lobster")

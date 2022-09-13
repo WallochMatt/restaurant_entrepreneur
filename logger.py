@@ -12,12 +12,26 @@ class Logger:
 
         Called in the place_order method of the Franchise class
         """
+        f = open("log.txt", "r")
+        try:
+            last_line = f.readlines()[-1]
+            x = last_line.split()
+        except:
+            x = "Transaction 0 : {selected_item.dish_name} ordered from location {store_num}. Total: 0"
+            
+        else:
+            self.transaction_count = int(x[1])
+            self.daily_sales = int(x[9])
+        
+        f.close()
+
         self.transaction_count += 1
         self.daily_sales += selected_item.price
+
         f = open("log.txt", "a")
-        f.write("\n" + f"Transaction {self.transaction_count}: {selected_item.dish_name} ordered from location {store_num}. Total: {self.daily_sales}")#Franchise.location_number?
+        f.write(f"Transaction {self.transaction_count} : {selected_item.dish_name} ordered from location {store_num}. Total: {self.daily_sales}" + "\n")#Franchise.location_number?
         f.close()
 
 
 
-sales_log = Logger() #would have to use read to for the bonus of picking up where the log left off
+sales_log = Logger()

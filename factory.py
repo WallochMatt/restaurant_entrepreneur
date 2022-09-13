@@ -9,7 +9,7 @@ class OrderFactory:
         pass
 
     @staticmethod
-    def create_order(choice):# Order static
+    def create_order(choice):
         """
         Parameters:
         choice : str -> This is set in place_order, under the Franchise class
